@@ -66,6 +66,8 @@ const App = () => {
 }
 */
 
+// PHASE II
+/*
 const Hello = (prop) => {
     console.log(prop)
     return (
@@ -98,5 +100,69 @@ const App = () => {
         </> // These are all alternate methods to return stuff
     )
 }
+
+
+export default App
+
+ */
+
+// PHASE III
+/*
+const Hello = ({ name, age }) => {
+    const bornYear = () => new Date().getFullYear() - age
+
+    return (
+        <div>
+            <p>
+                Hello {name}, you are {age} years old!
+            </p>
+            <p>
+                You were probably born in {bornYear()}, or so I think.
+            </p>
+        </div>
+    )
+}
+
+const App = () => {
+    const name = 'Anushka'
+    const age = 20
+
+    return (
+        <div>
+            <h1>Greetings</h1>
+            <Hello name="Nayonika" age={14} />
+            <Hello name={name} age={age} />
+        </div>
+    )
+}
+ */
+
+// const App = (props) => {
+//     const {counter} = props
+//     return (
+//         <div>{counter}</div>
+//     )
+// }
+
+/*
+import { useState } from "react";
+
+const App = () => {
+    const [ counter, setCounter] = useState(0)
+
+    setTimeout(
+        () => setCounter((counter + 1)),
+        1000
+    )
+
+    console.log('rendering...', counter)
+
+    return(
+        <div>
+            {counter}
+        </div>
+    )
+}
+ */
 
 export default App
