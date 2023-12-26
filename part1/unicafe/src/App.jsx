@@ -26,7 +26,6 @@ const Statistics = (props) => {
             <StatisticLine text="all" value ={total} />
             <StatisticLine text="average" value={calc} />
             <StatisticLine text='positive' value={`${(props.good / total) * 100} %`}/>
-
             </tbody>
         </table>
     )
@@ -62,8 +61,6 @@ const App = () => {
         </div>
 
     )
-
-
 }
 
 export default App
