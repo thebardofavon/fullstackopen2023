@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import Name from './components/Name'
 const App = () => {
-    const [persons, setPersons] = useState([
-        { name: 'Arto Hellas' }
-    ])
+    const [persons, setPersons] = useState([{ name: 'Arto Hellas' }])
     const [newName, setNewName] = useState('')
 
     const addName = (event) => {
         event.preventDefault()
         const nameObject = {
             name: newName
+        }
+
+        const isDuplicate = persons.some(
+            person => person.name.toLowerCase() === newName.toLowerCase()
+        )
+
+        if (isDuplicate) {
+            window.alert(`${newName} is already added to phonebook`)
+            return
         }
 
         console.log(persons)
